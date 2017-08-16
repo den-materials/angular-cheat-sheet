@@ -1,4 +1,4 @@
-# angular-cheat-sheet
+# WDI Angular Cheat Sheet
 
 # Components
 
@@ -7,7 +7,6 @@ You define a components application logic inside a class. The class interacts wi
 
 Properties can return data through imported services.
 Methods will set properties based on user input. 
-
 
 Components are created, updated, and destoryed as a user moves through the application. The app takes action at each moment in its lifecycle through optional lifecycle hooks(ex. ngOnInit()).
 
@@ -24,8 +23,6 @@ Enter a URL in the address bar and the browser navigates to a corresponding page
 Click links on the page and the browser navigates to a new page.
 Click the browser's back and forward buttons and the browser navigates backward and forward through the history of pages you've seen.
 The Angular Router ("the router") borrows from this model. It can interpret a browser URL as an instruction to navigate to a client-generated view. It can pass optional parameters along to the supporting view component that help it decide what specific content to present. You can bind the router to links on a page and it will navigate to the appropriate application view when the user clicks a link. You can navigate imperatively when the user clicks a button, selects from a drop box, or in response to some other stimulus from any source. And the router logs activity in the browser's history journal so the back and forward buttons work as well.
-
-
 
 Routing
 --------
@@ -122,8 +119,6 @@ When transpiles, it makes ES6 features ES5 compatible (which is awesome)
 
 <p>Another example:  Many applications capture information about the currently logged in user and make that information accessible through a user service.  This service could be provided by a module to all its children components.</p>
 
-# angular-cheat-sheet
-
 # Observables && Promises
 
 ## promise
@@ -138,18 +133,15 @@ A Promise handles a single event when an async operation completes or fails. It 
 * resolve
 * rejected
 
-
 ## observable
 An Observable is like a Stream and allows you to pass zero or more events where the callback is called for each event. It is cancellable. Uses Reactive Extensions (RxJS). Preferred over promises for Http requests. 
-
-
 
 ### syntax
 * Observable provides operators like map, forEach, reduce, similar to an array
 * subscribe
 * unsubscribe
 
-SERVICES!
+# SERVICES!
 
 WHAT IS IT?
 An Angular 2 service is simply a javascript function, along with its associated properties and methods, that can be included (via dependency injection) into Angular 2 components.
@@ -163,8 +155,6 @@ Code Example:
 @Injectable()
 export class NameService {
 }
-
-
 
 NAMING CONVENTION:
 The naming convention for service files is the service name in lowercase followed by .service. For a multi-word service name, use lower dash-case. For example, the filename for SpecialSuperHeroService is special-super-hero.service.ts.
