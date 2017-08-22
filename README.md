@@ -30,6 +30,32 @@ Routing
 First you need to import the routing package from the anuglar/router package.
 ex.... "import { RouterModule, Routes } from '@angular/router';"
 
+Second, you need a base URL of '/' defined in your index.html file:
+```//index.html (Somewhere in the head)
+<head>
+  <base href="/">
+```
+
+Your app module is the file that will contain all of your front-end routes, much like your routes file on the back-end. But before we go about defining routes, we have to tell Angular that we are interested in using its optional front-end routing library. To do that, we need to import that library, and in the NgModule decorator's (`@NgModule`) imports array, specify that our route paths will be constructed on the root ('/' -- our root path that we defined above). Then, remember how routes consist of 1), a URL path and 2), an HTTP verb associated with it? The routes in your app module will similarly have a path, but you'll be loading (i.e., "getting") a component instead. But, remember that if you're loading a component when you hit that URL path, our route will have to know about that component, so you'll have to import that component as well.
+
+```//app.module.ts
+import { RouterModule } from '@angular/router'; //tell Angular that you want to use the routing library (it doesn't come with Angular out of the box)
+import { PuppiesComponent } from './puppies.component'; //import any components that your routes will be hitting, so that this file knows what we're talking about
+
+@NgModule({
+  imports: [
+  ..., //other modules
+  RouterModule.forRoot([ //this function appends the paths below to the base URL we defined in our index.html file above
+    {
+      path: 'puppies', //appends 'puppies' to '/' -> '/puppies'
+      component: PuppiesComponent //So, when we hit /puppies in the URL bar, we will be rendering the PuppiesComponent
+    }
+  ])
+})
+```
+
+When you're defining routes in this manner, start with more specific routes and end with those that are less specific (those that take in route parameters, or, i.e., puppies/edit/:id), because the router uses a first-match wins strategy.
+
 ## Angular Universal
 
 SEO Optimization: Search engines won't be able to scrape single-page apps; "server-side pre-rendering  is a reliable, flexible, and efficient way to ensure that all search engines can access your content." ~Google, Angular Universal Docs
