@@ -73,7 +73,27 @@ Once installed, use ung instead of ng to serve, generate components, directives,
 
 E.g. `ung serve --open`
 
-# service worker
+## More Angular Universal
+
+The Angular Universal project consists of the base platform API and the surrounding tools that enables developer to do server side rendering(or pre-rendering) of Angular applications. The platform API part has been merged into Angular core as of 4.0.
+
+### At a high level, there are two major pieces to the Angular Universal:
+
+1. Rendering on the server which means generating all the HTML for a page at a given route.
+2. Transitioning from the server view to the client view in the browser client
+
+### The basic idea is to build an app that does not just render to server but also runs on the server.  In Angular 2, this is achieved with the help of Angular Universal which loads our app on the server first, and then drops it to the browser once ready.  
+
+### Highlights:
+
+- Better perceived performance
+    - First time users will instantly see a server rendered view which greatly improves perceived performance.  According to Google research, the difference of just 200 milliseconds in page load performance has an impact on user behavior. 
+- Optimized for Search Engines
+    - Server-side pre-rendering is a reliable, flexible and efficient way to ensure that all search engines can access your content.
+- Site Preview
+    - Ensure that Facebook, Twitter and all other social media apps correctly display a preview image of your app.
+
+## service worker
 a stand alone javascript program that you can run in your browser. it can handle background / network tasks for you website / web-app. service workers allow functionality offline and can speed up your app by using cached files if there has been no change.
 
 place in index.html file of your app:
