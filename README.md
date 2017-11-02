@@ -12,7 +12,66 @@ Components are created, updated, and destoryed as a user moves through the appli
 
 For Documentation on Angular components visit: https://angular.io/guide/architecture#components
 
-# Routing
+## Angular CLI
+[documentation](https://github.com/angular/angular-cli/wiki)
+
+### Overview
+
+The Angular CLI is a tool to initialize, develop, scaffold and maintain Angular applications
+
+### Getting Started
+
+To install the Angular CLI:
+
+`npm install -g @angular/cli`
+
+Generating and serving an Angular project via a development server Create and run a new project:
+
+```
+ng new my-project
+cd my-project
+ng serve
+```
+
+Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+### Common commands
+
+Generate a new component, service, modules:
+```ng generate component <name>
+ng generate service <name>
+ng generate module <name>
+```
+or use shorhand generation commands:
+`ng g c <name>`
+
+Run all jasmine tests:
+`ng test`
+
+Build/compile app into an output directory (`dist/`):
+`ng build`
+
+### Config
+You can use the `angular-cli.json` file to configure css and javascript libraries like Bootstrap and jQuery.
+
+For example, to use bootstrap you would:
+`npm install bootstrap`
+Then add the following to the `styles` array in `angular-cli.json`
+```
+"styles": [
+  "styles.css",
+  "../node_modules/bootstrap/dist/css/bootstrap.css"
+]
+```
+
+### Other helpful commands
+Search the angular documentation:
+`ng doc 'search term'`
+GitHub
+angular/angular-cli
+angular-cli - CLI tool for Angular
+
+## Routing
 
 Overview
 ------
