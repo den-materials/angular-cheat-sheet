@@ -260,3 +260,34 @@ export class NameService {
 
 NAMING CONVENTION:
 The naming convention for service files is the service name in lowercase followed by .service. For a multi-word service name, use lower dash-case. For example, the filename for SpecialSuperHeroService is special-super-hero.service.ts.
+
+## JASMINE/Testing
+
+The Jasmine test framework provides everything needed to write basic tests for Angular. It ships with an HTML test runner that executes tests in the browser. 
+
+#### Compare Jasmine and Mocha
+	- Similarities:
+		- Both use describe, it, before, beforeeach, each
+	- Differences: 
+		- Punctuation is different to.Equal vs toEqual
+		- Jasmine uses ES6 and Mocha uses ES5
+		- Jasmine opens a new window browser, mocha is just in Terminal
+		- Jasmine comes with its' own assertion library (which is why it is to.Equal)
+		
+- Use $ng test to run the testing suite
+- Helpful links and readings
+	- [Official angular docs](https://angular.io/guide/testing)
+- For end 2 end testing (ie acceptance tests), they use protractor not Jasmine. In e2e testing, one process runs the real application and a second process runs protractor tests that simulate user behavior and assert that the application respond in the browser as expected.
+- Sample unit test in [doghouse](https://github.com/den-materials/angular/blob/master/lectures/03-observables-tdd-universal/02-jasmine-and-tdd.md) 
+
+### Syntax Example:
+
+ describe(‘1st tests’, () => {
+ 
+  it(‘true is true’, () => expect(true).toBe(true));
+  
+});
+
+### Conclusion:
+
+![pasted image at 2017_11_02 02_44 pm](https://user-images.githubusercontent.com/31824846/32349634-5ca2ea08-bfdd-11e7-86c6-60818c8e611c.png)
