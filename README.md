@@ -177,6 +177,64 @@ in your angular-cli.json add service worker to your assets:
 ],
 ```
 
+#### The new updated service worker procedure ####
+
+For a new project:
+
+ng new my-project --service-worker
+adds service worker to the whole project (easy mode)
+https://angular.io/guide/service-worker-getting-started
+
+
+Existing Project:
+step 1: yarn add @@angular/service-worker
+step 2: ng set apps.0.serviceWorker=true
+step 3: import service worker into app.module.ts
+import { ServiceWorkerModule } from '@angular/service-worker’;        
+import { environment } from '../environments/environment’; 
+
+Then add service worker module to imports in the @NGmodule 
+ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
+
+Step 4: create a new file called ngsw-config.json. File path src/ngsw-config.json. Add this into the ngsw-config.json file
+{
+ "index": "/index.html",
+ "assetGroups": [{
+   "name": "app",
+   "installMode": "prefetch",
+   "resources": {
+     "files": [
+       "/favicon.ico",
+       "/index.html"
+     ],
+     "versionedFiles": [
+       "/*.bundle.css",
+       "/*.bundle.js",
+       "/*.chunk.js"
+     ]
+   }
+ }, {
+   "name": "assets",
+   "installMode": "lazy",
+   "updateMode": "prefetch",
+   "resources": {
+     "files": [
+       "/assets/**"
+     ]
+   }
+ }]
+}
+
+
+Step 5: ng serve does not work with service workers. To check if it is working run the following commands in the terminal 
+cd dist
+http-server -p 8080
+
+• A service worker is a script that your browser runs in the background, separate from a web page.
+• A service worker is a programmable network proxy that lets you control how network requests from your page are handled.
+• Service workers only run over HTTPS. Because service workers can intercept network requests and modify responses, "man-in-the-middle" attacks could be very bad.
+• Service workers enable applications to control network requests, cache those requests to improve performance, and provide offline access to cached content.
+
 links:
 - https://www.npmjs.com/package/@angular/service-worker
 - https://pascalprecht.github.io/slides/angular-and-service-workers/#/a
