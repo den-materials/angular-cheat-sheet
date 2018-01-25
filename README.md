@@ -209,6 +209,43 @@ It is transpiled using the command "tsc"
 
 When transpiles, it makes ES6 features ES5 compatible (which is awesome)
 
+TypeScript is a language for application-scale JavaScript. TypeScript adds optional types, classes, and modules to JavaScript. TypeScript supports tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript. Try it out at the playground, and stay up to date via our blog and Twitter account.
+
+TypeScript is a free and open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. Also, check out some other publications we've written
+
+TypeScript can actually report issues without you even saving your file, and leverage the type system to help you write code even faster (which leads to a truly awesome editing experience).
+
+Why Do We Even Use TypeScript?
+TypeScript brings several new features to the table. The most notable of these are classes, interfaces, and compile-time type checks.
+It is better to use TypeScript when:
+* You have a large codebase. When more than one person works on a project and the code base is huge, TS will help you avoid common errors.
+* Your developers come from strongly typed languages. When developers are already experienced with languages such as C++ and Java and don't want to deal with just JavaScript.
+* A framework recommends using TS. Such as Angular 2+.
+* You really need that faster performance.
+* Angular JS was released in 2010 by Google. It became popular very quickly because of its feature set. Different versions of Angular JS were released like 1.1, 1.2, and so on.
+* A few years later, Google engineers completely rewrote the framework to match the needs of today's rich client-side applications. They created a new version of AngularJS in TypeScript (which is not backward compatible) and released Angular 2 as a framework in 2016. They named it Angular 2, removing the JS suffix.
+* A few months later, after the release of Angular 2, new features were introduced and various bug fixes were done and the new version was released as Angular 4. There is no Angular 3.
+* What happened to Angular 3? The angular codebase is broken into parts/libraries such as core, compiler, animations, router, etc. Each of them can have their own version. Router library reached version 3 and others were still at 2.3. The next version would be 2.4 but having version 2.4 for the router library is incorrect - so to avoid confusion they skipped version 3 and Angular 4 was released.
+So, when we say Angular it means Angular (2+). When we say AngularJS, it means Angular JS(1.x). See the Angular product website here. http://www.typescriptlang.org/docs/home.html
+
+https://www.npmjs.com/package/@angular/typescript
+
+//example of basic types 
+let decimal: number = 6;
+let hex: number = 0xf00d;
+let binary: number = 0b1010;
+let octal: number = 0o744;
+//example of array
+let numberList: number[] = [1, 2, 3];
+//example of a array and the any type 
+let list : any[] = [1, "hello world", false, 1.5];
+for(let i = 0; i < list.length; i++){
+    console.log(list[i]);
+}
+//tsc is the command to compile ts to js
+
+________________________________________________________________________________________________________________________
+
 <h1>MODULES</h1>
 
 <p>An NgModule is a way to consolidate and organize information like components, directives, pipes, etc.  Some examples are the built in Angular libraries (like FormsModule, HttpModule, RouterModule)... and there are 3rd party modules as well. Modules can also add services to our applications.</p>
