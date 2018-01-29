@@ -35,6 +35,18 @@ ng serve
 
 Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
+## Updating CLI
+
+Npm-Check-Updates
+
+npm-check-updates is a command-line tool that allows you to upgrade your package.json or bower.json dependencies to the latest versions, regardless of existing version constraints.
+
+Installation: npm install -g npm-check-updates
+
+For more info:
+
+[documentation](https://www.npmjs.com/package/npm-check-updates)
+
 ### Common commands
 
 Generate a new component, service, modules:
