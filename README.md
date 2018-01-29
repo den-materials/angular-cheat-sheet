@@ -215,7 +215,7 @@ TypeScript is a free and open-source programming language developed and maintain
 
 TypeScript can actually report issues without you even saving your file, and leverage the type system to help you write code even faster (which leads to a truly awesome editing experience).
 
-Why Do We Even Use TypeScript?
+## Why Do We Even Use TypeScript?
 TypeScript brings several new features to the table. The most notable of these are classes, interfaces, and compile-time type checks.
 It is better to use TypeScript when:
 * You have a large codebase. When more than one person works on a project and the code base is huge, TS will help you avoid common errors.
@@ -228,7 +228,7 @@ It is better to use TypeScript when:
 * What happened to Angular 3? The angular codebase is broken into parts/libraries such as core, compiler, animations, router, etc. Each of them can have their own version. Router library reached version 3 and others were still at 2.3. The next version would be 2.4 but having version 2.4 for the router library is incorrect - so to avoid confusion they skipped version 3 and Angular 4 was released.
 So, when we say Angular it means Angular (2+). When we say AngularJS, it means Angular JS(1.x). See the Angular product website here. http://www.typescriptlang.org/docs/home.html
 
-https://www.npmjs.com/package/@angular/typescript
+- [NPM documentation for Angular Typescript](https://www.npmjs.com/package/@angular/typescript)
 
 //example of basic types 
 let decimal: number = 6;
