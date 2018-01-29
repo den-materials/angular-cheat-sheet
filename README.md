@@ -304,23 +304,25 @@ export class MyApp {
 * subscribe
 * unsubscribe
 
-https://hackernoon.com/understanding-creating-and-subscribing-to-observables-in-angular-426dbf0b04a3
-	## Observables are like newsletters that people can subscribe to. for each new subscription, a new newsletter is printed and sent out. 
-	https://gadenver.slack.com/files/U7ZDLDEBV/F8YSERTHQ/ewn3b.png
-		##similar to the marble diagrams, still helpful
-Both deal with asynchronous nature of applications but in different ways
-	promises return one set value
-	observables return multiple values over time
-Promises can be used in most cases, don't wanna overuse observables
-Both push data (initiate from the data creator)
-promises take in data and spit out a value
-observables originate an event and publish it to subscribers
-observables are lazy and only do something when something subscribes to listen to changes
-observables can be cancelled, promises cannot
-https://netbasal.com/angular-stop-using-observable-when-you-should-use-a-promise-8da0788a8d2
-https://developer.telerik.com/topics/web-development/introduction-observables-angular-developers/
+### Helpful Resources
 
+- [A good article explaining Angular Observables](https://hackernoon.com/understanding-creating-and-subscribing-to-observables-in-angular-426dbf0b04a3)
+	- Observables are like newsletters that people can subscribe to. for each new subscription, a new newsletter is printed and sent out. 
+- [Another take on Observable diagrams](https://gadenver.slack.com/files/U7ZDLDEBV/F8YSERTHQ/ewn3b.png)
+- [When is a promise a better choice?](https://netbasal.com/angular-stop-using-observable-when-you-should-use-a-promise-8da0788a8d2)
+- [Angular Observable Intro](https://developer.telerik.com/topics/web-development/introduction-observables-angular-developers/)
 
+### Conclusion
+
+- Both deal with asynchronous nature of applications but in different ways
+	- promises return one set value
+	- observables return multiple values over time
+- Promises can be used in most cases, don't wanna overuse observables
+- Both push data (initiate from the data creator)
+- promises take in data and spit out a value
+- observables originate an event and publish it to subscribers
+- observables are lazy and only do something when something subscribes to listen to changes
+- observables can be cancelled, promises cannot
 
 # SERVICES!
 
