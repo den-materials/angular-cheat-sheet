@@ -453,6 +453,14 @@ The naming convention for service files is the service name in lowercase followe
 
 The Jasmine test framework provides everything needed to write basic tests for Angular. It ships with an HTML test runner that executes tests in the browser. 
 
+
+####Main concepts
+  - Suites — describe(string, function) functions, take a title and a function containing one or more specs.
+  - Specs — it(string, function) functions, take a title and a function containing one or more expectations.
+  - Expectations — are assertions that evaluate to true or false. Basic syntax reads expect(actual).toBe(expected)
+  - Matchers — are predefined helpers for common assertions. Eg: toBe(expected), toEqual(expected). Find a complete list here.
+  Note that .toEqual() does a deep comparison while .toBe() is just a reference equality.
+
 #### Compare Jasmine and Mocha
 	- Similarities:
 		- Both use describe, it, before, beforeeach, each
@@ -461,6 +469,7 @@ The Jasmine test framework provides everything needed to write basic tests for A
 		- Jasmine uses ES6 and Mocha uses ES5
 		- Jasmine opens a new window browser, mocha is just in Terminal
 		- Jasmine comes with its' own assertion library (which is why it is to.Equal)
+    - Mocha: expect(num).to.equal(4)  Jasmine: expect(num).toEqual(4)
 		
 - Use $ng test to run the testing suite
 - Helpful links and readings
@@ -475,6 +484,10 @@ The Jasmine test framework provides everything needed to write basic tests for A
   it(‘true is true’, () => expect(true).toBe(true));
   
 });
+
+### Karma
+ng test - Karma runs all unit test files (based on config file karma.conf.js) in a chrome window (default), watches for changes like ng serve
+
 
 ### Conclusion:
 
